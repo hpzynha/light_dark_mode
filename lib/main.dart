@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:light_dark_mode/home_page.dart';
+import 'package:light_dark_mode/pages/home_page.dart';
+import 'package:light_dark_mode/theme/theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,8 +11,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: HomePage(),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: const HomePage(),
+      theme: lightMode,
+      darkTheme: darkMode,
     );
   }
 }
